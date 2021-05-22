@@ -60,12 +60,6 @@ class JDSecKillSubmit(JDSecKillAPI):
 
 
 if __name__ == '__main__':
-    login_cookie_180 = {
-        'pin': 'jd_775d2819c575f',
-        'wskey': 'AAJgawBDAEAr-Jy8pdvidxLseSILN47LA4rj5V4mq0Dv2143dthf-nCg6R655oB1YLz9BiijB8vNUfztcF18yNwXvfGyegwS',
-        'whwswswws': 'bF/U1oz+h1IQMOKbrCOnh702U3nIu9jNqn0yram2m9nrpYAIH7RsCD9m36h6oYOek',
-        'unionwsws': '{"devicefinger":"eidA115c812269sbwhdP0BiVTnWYIKVNymrSBMIXUUi5txupHPRalrjqhmB\/P3C0Hg3eO0405ppb4QzevFJmNvw\/PFslM\/68LPvtaaTT\/MCFQOsNUQhL","jmafinger":"bF\/U1oz+h1IQMOKbrCOnh702U3nIu9jNqn0yram2m9nrpYAIH7RsCD9m36h6oYOek"}'
-    }
 
     process_num = 3
     hour = '01'
