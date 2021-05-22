@@ -1,6 +1,9 @@
 # DD
 
-必备工具：模拟器MuMu或者夜神，安装frida-server，详细教程吾爱破解里面有。
+必备工具：模拟器MuMu或者夜神，安装frida-server，详细教程在CSDN和吾爱破解里面我提供了思路。
+https://blog.csdn.net/asdanny123/article/details/117073591
+or
+https://www.52pojie.cn/thread-1444614-1-1.html
 
 
 京东App 茅台
@@ -14,3 +17,4 @@
 6. 在jdseckilAPI这个文件调试通过后，jdseckillSubmitv1.11与jdseckillSubmitv1.1可以直接使用
 
 
+7. 最后祝各位茅台多多，财源滚滚。有技术问题的可以加我的微信sy742727,一起交流下共同进步哦！
