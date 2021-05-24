@@ -1,8 +1,6 @@
 # DD
 
-必备工具：模拟器MuMu或者夜神，安装frida-server，详细教程在CSDN和吾爱破解里面我提供了思路。
-https://blog.csdn.net/asdanny123/article/details/117073591
-or
+必备工具：模拟器MuMu或者夜神，安装frida-server，详细教程在吾爱破解里面我提供了思路。
 https://www.52pojie.cn/thread-1444614-1-1.html
 
 
