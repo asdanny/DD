@@ -16,4 +16,6 @@ login_cookie_1 = {
 截止目前还没有抢到过，但看起流程似乎没问题，需要点时间多尝试下。大家一起技术交流交流呗！
 
  
- 
+![WechatIMG769](https://user-images.githubusercontent.com/47909927/122498433-b0953a00-d021-11eb-81db-714971aa80ee.jpeg)
+
+
