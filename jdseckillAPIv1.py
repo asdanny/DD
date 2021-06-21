@@ -1,14 +1,14 @@
 import requests
-import json
-import re
-import datetime
+# import json
+# import re
+# import datetime
 import time
 from urllib import parse
-import base64
-import urllib
-import json
-import jd_frida as gs
-import copy
+# import base64
+# import urllib
+# import json
+# import jd_frida as gs
+# import copy
 
 
 def getUrlParams(url):
@@ -102,48 +102,48 @@ class JDSecKillAPI:
         body_string = '{"autoAddCart":"0","bsid":"","check":"0","ctext":"","isShowCode":"0","mad":"0","skuId":"100012043978","type":"1"}'
 
         data = {'body': body_string}
-        sign = gs.get_sign('appoint', body_string, self.uuid)
+        sign = 'st=1624249321832&sign=626a3fc2565b2e8636605f8b10d04894&sv=120'
         response = self.s.post(url=reserve_url + sign, data=data, headers=headers, timeout=1)
         return response.json()
 
-    def get_token_key(self):
-        headers = {
-            'user-agent': 'okhttp/3.12.',
-            'content-type': 'application/x-www-form-urlencoded',
-            'content-length': '3081',
-            'cookie': self.token_cookie_string,
-            'jdc-backup': self.token_cookie_string,
-        }
-        eid = 'eidA115c812269sbwhdP0BiVTnWYIKVNymrSBMIXUUi5txupHPRalrjqhmB/P3C0Hg3eO0405ppb4QzevFJmNvw/PFslM/68LPvtaaTT/MCFQOsNUQhL'
-        query_params = {
-            'functionId': self.function_id,
-            'clientVersion': '9.2.0',
-            'build': '85134',
-            'client': 'android',
-            'd_brand': 'HUAWEI',
-            'd_model': 'LIO-AN00',
-            'osVersion': '7.1.2',
-            'screen': '1920*1080',
-            'partner': 'hhqj02',
-            'aid': '38af3fc36a99f737',
-            'eid': eid,
-            'sdkVersion': '25',
-            'lang': 'zh_CN',
-            'uuid': self.uuid,
-            'area': '2_2830_51811_0',
-            'networkType': 'wifi',
-            'wifiBssid': '43236c80b42dbe2ba38bd9ab1ae41eb7',
-            'uts': '0f31TVRjBSsqndu4/jgUPz6uymy50MQJhQy4jAtAlh+n8GJiXoWP/9c8wP/+u4Xkbsf8iPUHrJ+nz8nXt+aGZXiPhZV6YXoLgZtI5OBNQe5SJGxU/1t661/3OQSsQaU0dG+4NuQHNRoIZo4dG3JxhCAuLrGelkGqZ7vmHNN/jFolcDLqtEBSFY7Fou5xPR7en5iaWp6tQJpCvsAaneoaYw=='
-        }
-        token_key_url = 'https://api.m.jd.com/client.action?' + parse.urlencode(query_params) + '&'
-
-        data = {'body': self.body_string}
-        sign = gs.get_sign(self.function_id, self.body_string, self.uuid)
-        response = self.s.post(url=token_key_url + sign, data=data, headers=headers, timeout=1)
-        # token_key = response.json()['tokenKey']
-        # print('Token Key: ----------> %s' % response.json())
-        # print(response.status_code)
-        return response.json()
+    # def get_token_key(self):
+    #     headers = {
+    #         'user-agent': 'okhttp/3.12.',
+    #         'content-type': 'application/x-www-form-urlencoded',
+    #         'content-length': '3081',
+    #         'cookie': self.token_cookie_string,
+    #         'jdc-backup': self.token_cookie_string,
+    #     }
+    #     eid = 'eidA115c812269sbwhdP0BiVTnWYIKVNymrSBMIXUUi5txupHPRalrjqhmB/P3C0Hg3eO0405ppb4QzevFJmNvw/PFslM/68LPvtaaTT/MCFQOsNUQhL'
+    #     query_params = {
+    #         'functionId': self.function_id,
+    #         'clientVersion': '9.2.0',
+    #         'build': '85134',
+    #         'client': 'android',
+    #         'd_brand': 'HUAWEI',
+    #         'd_model': 'LIO-AN00',
+    #         'osVersion': '7.1.2',
+    #         'screen': '1920*1080',
+    #         'partner': 'hhqj02',
+    #         'aid': '38af3fc36a99f737',
+    #         'eid': eid,
+    #         'sdkVersion': '25',
+    #         'lang': 'zh_CN',
+    #         'uuid': self.uuid,
+    #         'area': '2_2830_51811_0',
+    #         'networkType': 'wifi',
+    #         'wifiBssid': '43236c80b42dbe2ba38bd9ab1ae41eb7',
+    #         'uts': '0f31TVRjBSsqndu4/jgUPz6uymy50MQJhQy4jAtAlh+n8GJiXoWP/9c8wP/+u4Xkbsf8iPUHrJ+nz8nXt+aGZXiPhZV6YXoLgZtI5OBNQe5SJGxU/1t661/3OQSsQaU0dG+4NuQHNRoIZo4dG3JxhCAuLrGelkGqZ7vmHNN/jFolcDLqtEBSFY7Fou5xPR7en5iaWp6tQJpCvsAaneoaYw=='
+    #     }
+    #     token_key_url = 'https://api.m.jd.com/client.action?' + parse.urlencode(query_params) + '&'
+    #
+    #     data = {'body': self.body_string}
+    #     sign = gs.get_sign(self.function_id, self.body_string, self.uuid)
+    #     response = self.s.post(url=token_key_url + sign, data=data, headers=headers, timeout=1)
+    #     # token_key = response.json()['tokenKey']
+    #     # print('Token Key: ----------> %s' % response.json())
+    #     # print(response.status_code)
+    #     return response.json()
 
     def get_token_key_by_fix_sign(self):
         headers = {
@@ -185,10 +185,10 @@ class JDSecKillAPI:
         # print(response.status_code)
         return response.json()
 
-    def update_sign(self):
-        sign = gs.get_sign(self.function_id, self.body_string, self.uuid)
-        print(sign)
-        return sign
+    # def update_sign(self):
+    #     sign = gs.get_sign(self.function_id, self.body_string, self.uuid)
+    #     print(sign)
+    #     return sign
 
     def get_appjmp(self, token_params):
         headers = {
@@ -297,3 +297,5 @@ class JDSecKillAPI:
             print('submit order返回数据-非json格式：%s' % response.content)
 
         # return response
+
+        
