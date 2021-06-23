@@ -41,7 +41,8 @@ def get_sk(data):
     if n == 'cbc':  # check ok
         sk_val = q[3:13].upper() + p[10:19].lower()
     if n == 'by':
-        sk_val = o[5:8] + p.replace('a', 'c')
+        # sk_val = o[5:8] + p.replace('a', 'c')
+        sk_val = o[5:8] + re.sub('a', 'c', p, flags=re.IGNORECASE)
     if n == 'xa':
         sk_val = o[1:16] + s[4:10]
     if n == 'cza':
