@@ -1,11 +1,19 @@
 # DD
 1. sk参数的算法已经上传
 
-2. frida-sign签名的实现已经上传
+2. python重写sign签名，不需要frida，每次都会自己生成 （2021-7-9日更新）
 
-3. 新版脚本已经上传
+3. 请自行抓包补充参数
+   self.aid = ''
+   self.eid = ''
+   self.uuid = ''
+   self.uts = ''
+   self.wifiBssid = ''
+   self.user_agent = ''
 
-新的抢购脚本不需要frida，直接可以运行，请填入对应的cookie
+4.需要的依赖：pip install requests
+
+5.抢购运行的文件为JDMain.py，运行前请输入自己的cookie，
 login_cookie_1 = {
    'pin': '',
    'wskey': '',
@@ -13,7 +21,8 @@ login_cookie_1 = {
    'unionwsws': ''
 }
 
-截止目前还没有抢到过，但看起流程似乎没问题，需要点时间多尝试下。大家一起技术交流交流呗！
+6.如有技术需要，请进群交流哦～
+
 
  
 
