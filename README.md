@@ -5,7 +5,9 @@
 4. 需要的依赖：pip install requests
 5. 抢购运行的文件为JDMain.py，运行前请输入自己的cookie，login_cookie_1 = {'pin': '','wskey': '','whwswswws': '','unionwsws': ''}
 6. 如有技术需要，请进群交流哦～
- 
+
+![image](https://github.com/asdanny/DD/blob/main/WechatIMG781.jpeg)
+
 
 
 
